@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit-profile.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form__container profile__form">
+            <form id="profile-form" onsubmit="return saveData()" action="profile.html">
+                <h1>Edit Profile</h1>
+                <div class="profile-picture">
+                    <img id="profile-pic" src="imgs/pp.jpg" alt="Profile Picture">
+                    <input type="file" id="upload-pic" accept="image/*" onchange="previewImage(event)">
+                </div>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="contact" placeholder="Contact Number" required>
+                <button type="submit" class="btn save-btn">Save Changes</button>
+                
+                <button type="button" class="btn toggle-password-btn" onclick="togglePasswordFields()">Change Password</button>
+                
+                <div id="password-fields" class="password-fields">
+                    <input type="password" id="current-password" placeholder="Current Password" required>
+                    <input type="password" id="new-password" placeholder="New Password" required>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    <button type="button" class="btn save-password-btn" onclick="savePassword()">Save Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="edit-profile.js"></script>
+</body>
+</html>

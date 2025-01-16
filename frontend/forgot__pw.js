@@ -1,3 +1,4 @@
+//form validation
 function data(){
     var a = document.getElementById("n1").value;
 

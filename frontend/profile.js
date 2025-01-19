@@ -1,9 +1,14 @@
-window.onload = function() {
-    const name = localStorage.getItem('name') || 'John Doe';
-    const email = localStorage.getItem('email') || 'john.doe@example.com';
-    const contact = localStorage.getItem('contact') || '+1234567890';
 
-    document.getElementById('name').innerText = name;
-    document.getElementById('email').innerText = email;
-    document.getElementById('contact').innerText = contact;
-};
+window.addEventListener('DOMContentLoaded', () => {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData) {
+        document.getElementById('name').textContent = userData.name;
+        document.getElementById('email').textContent = userData.email;
+        document.getElementById('role').textContent = `Role: ${userData.role}`;
+        document.getElementById('contact').textContent = userData.contact;
+    } else {
+        alert("No user data found. Please sign up first!");
+        window.location.href = 'login.html';
+    }
+});

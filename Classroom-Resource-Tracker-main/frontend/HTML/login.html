@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form__container sign__up">
+            <form onsubmit="return data__signup()" id="signup-form" action="#">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" id="n3" required>
+                <input type="email" placeholder="Email" id="n4" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="n5" required>
+                    <span class="toggle-password" onclick="togglePassword('n5')">&#128065;</span>
+                </div>
+                <div class="password-container">
+                    <input type="password" placeholder="Confirm Password" id="n6" required>
+                    <span class="toggle-password" onclick="togglePassword('n6')">&#128065;</span>
+                </div>
+                <div class="container__role">
+                    <div class="teacher">
+                        <input type="radio" name="role" id="role_teacher" value="Teacher">
+                        <label for="role_teacher">Teacher</label>
+                    </div>
+                    <div class="student">
+                        <input type="radio" name="role" id="role_student" value="Student" checked="checked">
+                        <label for="role_student">Student</label>
+                    </div>
+                </div>
+                <div class="cr">
+                    <input type="radio" name="role" id="role_class_rep" value="CR">
+                    <label for="role_class_rep">Class Representative</label>
+                </div>
+                            
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form__container sign__in">
+            <form id="login-form" action="main-page.html">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" id="n1" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="n2" required>
+                    <span class="toggle-password" onclick="togglePassword('n2')">&#128065;</span>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle__container">
+            <div class="toggle">
+                <div class="toggle__panel toggle__left">
+                    <h1>Welcome!</h1>
+                    <p>Enter the required details to use all of the site features</p>
+                    <p>Already Have an Account?</p>
+                    <button type="button" id="login">Sign In</button>
+                </div>
+                <div class="toggle__panel toggle__right">
+                    <h1>Welcome!</h1>
+                    <p>Register with the required details to use all of the site features</p>
+                    <p>Don't Have an Account?</p>
+                    <button type="button" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/login.js"></script>
+</body>
+</html>

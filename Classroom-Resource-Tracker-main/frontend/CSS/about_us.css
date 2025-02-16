@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color:#ff833e;
+    --primary-color-dark:#db6f35;
+    --text-dark:#333333;
+    --text-light:#767268;
+    --white:#ffffff;
+    --max-width:1200px;
+    --header-font:"Bebas Neue", serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    background-color: #f8f8f8;
+}
+
+.h{
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.heading h1{
+   color: var(--primary-color);
+    text-align: center;
+    margin: 2rem;
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-family: var(--header-font);
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+.content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.content p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+}
+.image{
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.cta-btn{
+    color: var(--white);
+    background-color: var(--primary-color); 
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem; 
+    white-space: nowrap;
+    border-radius: 10px; 
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cta-btn:hover{
+    background-color: var(--primary-color-dark);
+}
+@media screen and (max-width: 768px) {
+    .heading h1{
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .h{
+        margin: 0px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+    .content{
+        width: 100%;
+        margin: 35px 0px;
+    }
+    .content h2{
+        font-size: 30px;
+    }
+    .content p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .cta-btn{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .image{
+        width: 100%;
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

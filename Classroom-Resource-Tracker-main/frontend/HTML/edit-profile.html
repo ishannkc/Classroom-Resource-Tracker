@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/edit-profile.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form__container profile__form">
+            <form id="profile-form" onsubmit="return saveData(event)">
+                <h1>Edit Profile</h1>
+                <div class="profile-picture">
+                    <img id="profile-pic" src="../imgs/pp.jpg" alt="Profile Picture">
+                </div>
+                <input type="text" id="name" placeholder="Full Name" required readonly>
+                <input type="email" id="email" placeholder="Email" required readonly>
+                <input type="text" id="contact" placeholder="Contact Number" required>
+                <button type="submit" class="btn save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script src="../JS/edit-profile.js"></script>
+</body>
+</html>

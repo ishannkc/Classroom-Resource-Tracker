@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/booked_resource.css">
+    <title>Classroom Resource Tracker</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a onclick="window.location.reload()" href="main-page.html">ClassroomRe<span>SourceTracker</span>.</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a onclick="window.location.reload()" href="main-page.html">Home</a></li>
+            <li><a onclick="window.location.href = 'profile.html';" href="#">Profile</a></li>
+            <li><a onclick="window.location.href = 'about_us.html';" href="#">About Us</a></li>
+            <li><a onclick="window.location.href = 'contact.html';" href="#">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+            <button onclick="window.location.href='index.html';" class="btn log__out">Log Out</button>
+        </div>
+    </nav>
+
+    <h1>Booked <span>Resources</span></h1>
+
+    <div class="box">
+        <div class="table">
+            <div class="table_container">
+                <table id="booked_resources_table">
+                    <thead>
+                        <tr>
+                            <th>Resource </th>
+                            <th>Quantity</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../JS/booked_resource.js"></script>
+</body>
+
+</html>

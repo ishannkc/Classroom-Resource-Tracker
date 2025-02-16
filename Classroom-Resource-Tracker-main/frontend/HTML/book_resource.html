@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/book_resource.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Classroom Resource Tracker</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a onclick="window.location.reload()" href="main-page.html">ClassroomRe<span>SourceTracker</span>.</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a onclick="window.location.reload()" href="main-page.html">Home</a></li>
+            <li><a onclick="window.location.href = 'profile.html';" href="#">Profile</a></li>
+            <li><a onclick="window.location.href = 'about_us.html';" href="#">About Us</a></li>
+            <li><a onclick="window.location.href = 'contact.html';" href="#">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+            <button onclick="window.location.href='index.html';" class="btn log__out">Log Out</button>
+        </div>
+    </nav>
+
+    <div class="booking_form">
+        <h2>Book Your <span>Resource</span></h2>
+        <form>
+            <div class="input_group">
+                <i class='bx bxs-devices'></i>
+                <input type="text" id="resourceName" readonly required>
+            </div>
+            <div class="input_group">
+                <i class='bx bxs-message-add'></i>
+                <input type="number" placeholder="Quantity" min="1" max="10">
+            </div>
+            <div class="input_group">
+                <i class='bx bxs-calendar'></i>
+                <input type="date" required>
+            </div>
+            <div class="input_group">
+                <i class='bx bxs-calendar'></i>
+                <input type="time" required>
+            </div>
+            <p>To</p>
+            <div class="input_group">
+                <i class='bx bxs-calendar'></i>
+                <input type="time" required>
+            </div>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+   
+     <script src="../JS/book_resource.js"></script>
+     </body>
+     </html>

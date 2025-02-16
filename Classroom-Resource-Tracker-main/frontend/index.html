@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Classroom Resource Tracker</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a onclick="window.location.reload()"href="#">ClassroomRe<span>SourceTracker</span>.</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a onclick = "window.location.reload()"href="#">Home</a></li>
+            <li><a  onclick = "window.location.href = './HTML/login.html';"href="#">Profile</a></li>
+            <li><a onclick = "window.location.href = './HTML/about_us.html';"href="#">About Us</a></li>
+            <li><a onclick = "window.location.href = './HTML/contact.html';"href="#">Contact</a></li>
+        </ul>
+    <div class="nav__btns">
+        <button onclick = "window.location.href='./HTML/login.html';"class="btn sign__up">Sign Up</button>
+        <button onclick = "window.location.href='./HTML/login.html';"class="btn sign__in">Sign In</button>
+    </div>
+</nav>
+     <div class=" header__content">
+        <h1>ORGANIZE <br /> <span>TRACK </span> AND ENHANCE YOUR  <br /> RESOURCES EFFICIENTLY</h1>
+     </div>
+
+     <section class="service">
+        <div class="wrapper">
+            <div class="view">
+                <div class="box">
+                    <i class='bx bx-time-five'></i>
+                            <h2>Book Resource</h2>
+                            <ul>
+                                <li>View available resources.</li>
+                                <li>Book resources for times.</li>
+                                <li>Prevent double bookings.</li>
+                            </ul>
+                            <a onclick = "window.location.href = './HTML/login.html';"href="#" class = "button">Book</a> 
+                </div>
+            </div>
+
+
+        <div class="book">
+            <div class="box">
+                <i class='bx bx-glasses-alt'></i>
+                <h2>Booked Resources</h2>
+                <ul>
+                    <li>View booked resources</li>
+                    <li>Check booking statuses</li>
+                    <li>Manage upcoming reservations.</li>
+                </ul>
+                <a onclick = "window.location.href = './HTML/login.html';"href="#" class = "button">View</a>
+            </div>
+        </div>
+
+        <div class="add">
+            <div class="box">
+                <i class='bx bxs-edit'></i>
+                <h2>Add Resource</h2>
+                <ul>
+                    <li>Enter resource info.</li>
+                    <li>Validate required fields.</li>
+                    <li>Confirm successful addition.</li>
+                </ul>
+                <a onclick = "window.location.href = './HTML/login.html';"href="#" class = "button">Add</a>
+            </div>
+        </div>
+    </section>
+
+     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>

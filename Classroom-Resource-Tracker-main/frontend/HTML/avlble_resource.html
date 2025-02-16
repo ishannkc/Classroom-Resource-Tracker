@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/avlble_resource.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Classroom Resource Tracker</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a onclick="window.location.reload()" href="main-page.html">ClassroomRe<span>SourceTracker</span>.</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a onclick="window.location.reload()" href="main-page.html">Home</a></li>
+            <li><a onclick="window.location.href = 'profile.html';" href="#">Profile</a></li>
+            <li><a onclick="window.location.href = 'about_us.html';" href="#">About Us</a></li>
+            <li><a onclick="window.location.href = 'contact.html';" href="#">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+            <button onclick="window.location.href='index.html';" class="btn log__out">Log Out</button>
+        </div>
+    </nav>
+
+    <h1>Available <span>Resources</span></h1>
+
+    <div class="resource">
+
+         <!-- <div class="content">
+            <img src="imgs/projector.png" alt="projector">
+            <h3>Projector</h3>
+            <a onclick="storeResourceName('Projector')" class="button">Book Now</a>
+        </div>
+
+        <div class="content">
+            <img src="imgs/laptop.png" alt="laptop">
+            <h3>Laptop</h3>
+ 
+            <a onclick="storeResourceName('Laptop')" class="button">Book Now</a>
+        </div>
+
+        <div class="content">
+            <img src="imgs/smartboard.png" alt="smartboard">
+            <h3>SmartBoard</h3>
+            <a onclick="storeResourceName('Resource 3')" class="button">Book Now</a>
+        </div>
+
+        <div class="content">
+            <img src="imgs/classroom.png" alt="classroom">
+            <h3>Classroom</h3>
+            <a onclick="storeResourceName('Resource 4')" class="button">Book Now</a>
+        </div> -->
+       <!-- <div class="content">
+            <img src="imgs/cvraman.png" alt="cv_raman_hall">
+            <h3>CV Raman Hall</h3>
+            <ul>
+                <li>Quantity: 1</li>
+                <li>Quality: Excellent</li>
+            </ul>
+            <a onclick="storeResourceName('Cv Raman Hall')" class="button">Book Now</a>
+        </div>  -->
+        
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../JS/avlble_resource.js"></script>
+    <script>
+        function storeResourceName(resourceName) {
+            sessionStorage.setItem('resourceName', resourceName);
+            window.location.href = 'book_resource.html';
+        }
+    </script>
+</body>
+</html>

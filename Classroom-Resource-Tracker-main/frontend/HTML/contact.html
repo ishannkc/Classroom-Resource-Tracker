@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/contact.css">
+
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form__container sign__in">
+            <form action="https://formsubmit.co/classroomresourcetracker@gmail.com" method="POST">
+                <h1>Contact Us</h1>
+                
+
+                <input type="text"  name = "Name" placeholder="Name" id="input_field" required>
+                <input type="text" name = "Email" placeholder="Email" id="input_field" required>
+                <input type="text" name = "Subject" placeholder="Subject" id="input_field" required>
+                <textarea name="Message" placeholder="Enter your Message" id="input_field" required></textarea>
+                <input type="hidden" name = "_next" value = "http://127.0.0.1:5500/Classroom-Resource-Tracker-main/frontend/HTML/main-page.html">
+                <button type="submit">Submit</button>
+
+            </form>
+        </div> 
+        <div class="toggle__container">
+            <div class="toggle">
+                <div class="toggle__panel toggle__right">
+                    <h1>Get In Touch</h1>
+                    <p>Have questions or need assistance? Reach out to us through our Contact Us page, and we'll be happy to help!</p>
+                    <p></p>
+                    <button onclick = "window.location.href = 'main-page.html';"class = "hidden" id="register">Go Back</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

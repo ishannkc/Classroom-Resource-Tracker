@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/add_resource.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Classroom Resource Tracker</title>
+</head>
+
+<body>
+ 
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a onclick="window.location.reload()"href="main-page.html">ClassroomRe<span>SourceTracker</span>.</a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a onclick = "window.location.reload()"href="main-page.html">Home</a></li>
+            <li><a onclick = "window.location.href = 'profile.html';"href="#">Profile</a></li>
+            <li><a onclick = "window.location.href = 'about_us.html';"href="#">About Us</a></li>
+            <li><a onclick = "window.location.href = 'contact.html';"href="#">Contact</a></li>
+        </ul>
+    <div class="nav__btns">
+        <button onclick = "window.location.href='index.html';"class="btn log__out">Log Out</button>
+    </div>
+</nav>
+
+
+<div class="contain">
+<div class="container" id="container">
+    <div class="form__container sign__in">
+        <form>
+            <h1>Add Resource</h1>
+
+            <select name="resourceName" class="box" required>
+                <option value="" selected disabled>Select Item</option>
+                <option value="Projector">Projector</option>
+                <option value="Laptop">Laptop</option>
+                <option value="SmartBoard">Smart Board</option>
+                <option value="Classroom">Classroom</option>
+                <!-- <option value="CV Raman Hall">CV Raman Hall</option> -->
+    
+            </select>
+            <input type="text" placeholder="Your Email" id="input_field" required>
+            <input type="number" min="1"  max = "10"placeholder="Quantity" id="input_field" required>
+            <button type="submit">Add Resource</button>
+        </form>
+    </div> 
+    <div class="toggle__container">
+        <div class="toggle">
+            <div class="toggle__panel toggle__right">
+                <h1></h1>
+                <p>Please provide the required details so that the resources can be added</p>
+                <p></p>
+                <button onclick = "window.location.href = 'main-page.html';"class = "hidden" id="register">Go Back</button>    
+            </div>     
+        </div>  
+    </div> 
+</div>
+
+    
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="../JS/add_resource.js"></script>
+</html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "moment-timezone": "^0.5.47",
+    "node-cron": "^3.0.3"
+  }
+}

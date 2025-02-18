@@ -12,14 +12,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST || '127.0.0.1',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || 'YOUR_PASSWORD', // Use environment variable for DB password
-    database: process.env.DB_NAME || 'login',
-    port: process.env.DB_PORT || 3306,
-    timezone: '+05:45' // Set timezone to Asia/Kathmandu
-});
+const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQL_ROOT_PASSWORD}@${process.env.RAILWAY_PRIVATE_DOMAIN}:3306/${process.env.MYSQL_DATABASE}`
+
+const db = mysql.createConnection(urlDB);
+
+module.exports = db;
 
 db.connect((err) => {
     if (err) {
@@ -28,6 +25,8 @@ db.connect((err) => {
     }
     console.log('Connected to the database!');
 });
+
+
 
 // User routes (signup, signin)
 app.post('/signup', async (req, res) => {

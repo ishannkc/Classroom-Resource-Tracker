@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: process.env.DB_HOST || '127.0.0.1',
     user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || 'nopartrediron', // Use environment variable for DB password
+    password: process.env.DB_PASSWORD || 'YOUR_PASSWORD', // Use environment variable for DB password
     database: process.env.DB_NAME || 'login',
     port: process.env.DB_PORT || 3306,
     timezone: '+05:45' // Set timezone to Asia/Kathmandu

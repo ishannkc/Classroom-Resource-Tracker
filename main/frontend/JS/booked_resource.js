@@ -1,3 +1,4 @@
+//animations
 const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",
@@ -11,20 +12,21 @@ ScrollReveal().reveal(".box", {
     ...scrollRevealOption,
     delay: 300,
 });
-document.addEventListener('DOMContentLoaded', async () => {
-    const fetchBookings = async () => {
-        try {
+document.addEventListener('DOMContentLoaded', async () => {//ensures script runs only after page is fully loaded
+   //function to fetch and display the booking data
+    const fetchBookings = async () => { 
+        try { //fetching data from api
             const response = await fetch('http://localhost:3000/api/bookings');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const bookings = await response.json();
-
+            const bookings = await response.json();//converting response to json
+            //clearing the table to prevent duplicate data by finding <tbody>
             const tableBody = document.getElementById('booked_resources_table').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear the table before appending new data
+            tableBody.innerHTML = ''; 
 
-            const currentTime = new Date(); // Local current time
-            console.log('Current Time:', currentTime); // Debugging log
+            const currentTime = new Date(); // gets current time
+            console.log('Current Time:', currentTime); //debugging log
 
             bookings.forEach(booking => {
                 console.log('Booking Data:', booking);
@@ -43,8 +45,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (isNaN(endTime.getTime())) {
                     console.error('Invalid endTime:', booking.endTime);
                 }
-
+                //displaying bookings that haven't expired
                 if (currentTime < endTime) {
+                    //new row added for each booking
                     const row = document.createElement('tr');
 
                     row.innerHTML = `
@@ -56,11 +59,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                     `;
 
                     tableBody.appendChild(row);
-                } else {
+                } else {//expired bookings expired
                     console.log(`Booking for ${booking.resourceName} is past its end time and won't be displayed.`);
                 }
             });
-        } catch (error) {
+        } catch (error) { //error handling
             console.error('Error:', error);
             alert('Failed to load booked resources.');
         }
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Fetch bookings initially
     fetchBookings();
 
-    // Set interval to refresh the bookings table every minute
+    //booking data refreshes after 1 min
     setInterval(fetchBookings, 60000);
 });
 

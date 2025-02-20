@@ -1,5 +1,5 @@
 
-//menu toggle button, appears when clicked
+//menu toggle button, appears when clicked(for mobile view / small screen view)
 const menuBtn  = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -15,7 +15,7 @@ navLinks.addEventListener("click", (e) => {
     navLinks.classList.remove("open");
     menuBtnIcon.setAttribute("class", ri-menu-line);
 });
-//scroll reveal transition
+//scroll reveal transition, animation
 const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",

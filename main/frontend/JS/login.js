@@ -26,20 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Passwords do not match!");
             return;
         }
-    
+        //ensures all fields are filled in
         if (!name || !email || !password || !role) {
             alert("All fields are required!");
             return;
         }
     
-        try {
+        try {//sending data to api
             const response = await fetch('http://localhost:3000/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, password, role }),  // Send role to backend
             });
     
-            const result = await response.json();  // Get the error message or success message from the backend
+            const result = await response.json();  // awaiting respone and get the error message or success message from the backend
     
             if (response.ok) {
                 alert('Signup successful!');
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 alert(`Signup failed: ${result.message}`);  // Corrected syntax error
             }
-        } catch (error) {
+        } catch (error) {//error handling
             console.error('Signup Error:', error);
             alert('Signup failed due to a client-side error.');
         }
@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
     
-        try {
+        try {//sending response to api
             const response = await fetch('http://localhost:3000/signin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
             });
     
-            const result = await response.json();
+            const result = await response.json();//awaitinf response
     
             if (response.ok) {
                 alert('Login successful!');
